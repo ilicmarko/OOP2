@@ -1,3 +1,7 @@
+/* Ovaj primer je konkretno malo cudnije implementiran zato sto koristi map-u da
+ * da bi čuvao prototipe i koristi fabriku za kreiranje istih.
+ */
+
 #include <iostream>
 #include <map>
 
@@ -52,7 +56,7 @@ public:
 class Fabrika{
 private:
 	map<char,Celija*> array;
-	
+
 public:
 	Fabrika(){
 		array['A'] = new CelijaA();
@@ -86,4 +90,3 @@ int main(){
 
 	return 0;
 }
-
