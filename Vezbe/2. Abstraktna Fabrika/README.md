@@ -77,4 +77,4 @@ Za linux sistem napravim `LinuxFabrika`-u, iz *apstraktne fabrike* znam da mogu 
 
 ## Diagram
 
-![UML Dijagram](https://upload.wikimedia.org/wikipedia/commons/9/9d/Apstract_factory_UML.svg)
+![UML Dijagram](https://upload.wikimedia.org/wikipedia/commons/9/9d/Apstract_factory_UML.svg.png)
