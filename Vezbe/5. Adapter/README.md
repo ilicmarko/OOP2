@@ -87,3 +87,27 @@ public:
 	}
 }
 ```
+
+## Razlika
+
+Adapter **klase** se oslanja na nasleđivanje klase, tako da ne može za *izvor* da se uzme
+apstraktna klasa, već neka konkretna. Šta više ako više *izvora* za svaki posebno **moramo** napisati
+adapter.
+
+Kod adaptera *objekta* mi pravimo na neki način *"wrapper"* oko stare klase, takođe klasu
+prosleđujemo kao argument, tako da je *moguće* da se više klasa adaptira preko jednog adaptera.
+
+*Kod adaptera objekta, nije uvek moguće adaptirati više klasa, to je moguće ako dele osobine koje adaptiramo*
+
+## Diagram
+
+**Adapter objekta:**
+
+![UML dijagram adaptera objketa][1]
+
+**Adapter klase:**
+
+![UML dijagram adaptear klase][2]
+
+[1]: https://upload.wikimedia.org/wikipedia/commons/d/d7/ObjectAdapter.png
+[2]: https://upload.wikimedia.org/wikipedia/commons/3/35/ClassAdapter.png
