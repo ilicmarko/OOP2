@@ -6,20 +6,12 @@ Prvi od uzorka koji ne pripada kategoriji **kreatora** već **strukturni**.
 Adapter govori na koji način će stara klasa i novi klijentski definisan interfejs
 da komuniciraju.
 
-Postoje dve vrste adaptera
-* Adapter klase
-* Adapter objekta
-
 ## Klase
 
 Sadrži minimalno 3 klase:
 * Novi interfejs
 * Stara klasa
 * Adapter
-
-
-## Klase
-*Izvorna* i *Ciljna* klase su iste za obe vrste, jedino se razlikuje **Adapter** klasa.
 
 ### Ciljna interface (nova klasa)
 Nova **apstraktna** klasa u koju hoćemo da prebacimo staru klasu.
@@ -50,6 +42,13 @@ public:
 
 U ovoj klasi trebamo da "pokažemo" novoj metodi (`novaMetoda`) kako da funkcioniše sa
  starom metodom (`staraMetoda`).
+
+Postoje dve vrste adaptera
+* Adapter klase
+* Adapter objekta
+
+*Izvorna* i *Ciljna* klase su iste za obe vrste, jedino se razlikuje **Adapter** klasa.
+
 
 ## Način 1: Adapter **Klase**
 
