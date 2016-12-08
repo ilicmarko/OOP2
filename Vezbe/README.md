@@ -1,19 +1,19 @@
 # Projektni uzorci
 
-## Podela
+## Sadrzaj
 
 ### Stvaralacki projetni uzorci
 
-1. Apstraktna fabrika
-2. Graditelj
-3. ~~Fabricki metod~~
-4. Prototip
-5. Unikat
+* [Apstraktna fabrika](1. Abstract factory/)
+* [Graditelj](2. Builder/)
+* ~~Fabricki metod~~
+* [Prototip](4. Prototype/)
+* [Unikat](5. Singleton/)
 
 ### Strukturni projektni uzorci
 
-[6. Adapter](6. Adapter/)
-
-[7. Most](7. Bridge/)
-
-[8. Kompozicija](8. Composite/)
+* [Adapter](6. Adapter/)
+* [Most](7. Bridge/)
+* [Kompozicija](8. Composite/)
+* [Dekorater](9. Decorator/)
+* [Fasada](10. Facade/)
