@@ -4,16 +4,16 @@
 
 ### Stvaralacki projetni uzorci
 
-* [Apstraktna fabrika](1. Abstract factory/)
-* [Graditelj](2. Builder/)
+* [Apstraktna fabrika](01. Abstract factory/)
+* [Graditelj](02. Builder/)
 * ~~Fabricki metod~~
-* [Prototip](4. Prototype/)
-* [Unikat](5. Singleton/)
+* [Prototip](04. Prototype/)
+* [Unikat](05. Singleton/)
 
 ### Strukturni projektni uzorci
 
-* [Adapter](6. Adapter/)
-* [Most](7. Bridge/)
-* [Kompozicija](8. Composite/)
-* [Dekorater](9. Decorator/)
+* [Adapter](06. Adapter/)
+* [Most](07. Bridge/)
+* [Kompozicija](08. Composite/)
+* [Dekorater](09. Decorator/)
 * [Fasada](10. Facade/)
