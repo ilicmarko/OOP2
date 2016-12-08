@@ -17,3 +17,4 @@
 * [Kompozicija](08. Composite/)
 * [Dekorater](09. Decorator/)
 * [Fasada](10. Facade/)
+* [Muva](11. Flyweight/)
