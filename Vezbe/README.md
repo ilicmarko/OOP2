@@ -18,3 +18,4 @@
 * [Dekorater](09. Decorator/)
 * [Fasada](10. Facade/)
 * [Muva](11. Flyweight/)
+* [Zastupnik](12. Proxy/)
