@@ -31,7 +31,7 @@
 <td>Opis</td>
 </tr>
 <tr>
-<td colspan='3'>Apstraktna fabrika</td>
+<td colspan='3' align='center'><strong><strong>Apstraktna fabrika</strong></strong></td>
 </tr>
 <tr>
 <td><code>IFabrika</code></td>
@@ -54,7 +54,7 @@
 <td>Konkretan proizvod</td>
 </tr>
 <tr>
-<td colspan='3'>Prototip</td>
+<td colspan='3' align='center'><strong>Prototip</strong></td>
 </tr>
 <tr>
 <td><code>IPrototype</code></td>
@@ -71,7 +71,7 @@ return tmp;
 <td>Kokrentan prototip implementira <code>clone</code>. Vraca kopiju sebe</td>
 </tr>
 <tr>
-<td colspan='3'>Unikat</td>
+<td colspan='3' align='center'><strong>Unikat</strong></td>
 </tr>
 <tr>
 <td><code>singleton</code></td>
@@ -82,7 +82,7 @@ return single;
 <td>Jednom se samo generise objekat</td>
 </tr>
 <tr>
-<td colspan='3'>Adapter</td>
+<td colspan='3' align='center'><strong>Adapter</strong></td>
 </tr>
 <tr>
 <td><code>NovaKlasa</code></td>
@@ -111,7 +111,7 @@ StaraKlasa *stari
 <td>Adapter čuva referencu na <code>Staruklasu</code> koja se prosleđuje konstruktorom</td>
 </tr>
 <tr>
-<td colspan='3'>Most</td>
+<td colspan='3' align='center'><strong>Most</strong></td>
 </tr>
 <tr>
 <td><code>Implementacija</code></td>
@@ -147,7 +147,7 @@ crtac->crtajPortret();
 <td>Implementira metodu iz <code>IApstrakcije</code></td>
 </tr>
 <tr>
-<td colspan='3'>Kompozicija</td>
+<td colspan='3' align='center'><strong>Kompozicija</strong></td>
 </tr>
 <tr>
 <td><code>IList</code></td>
@@ -168,7 +168,7 @@ vector
 	<td>Nasleđuje <code>IList</code>, zato što treba da omogući iste metode samo za svu decu. Sadži komponentu koja čuva listove</td>
 </tr>
 <tr>
-	<td colspan='3'>Dekorater</td>
+	<td colspan='3' align='center'><strong>Dekorater</strong></td>
 </tr>
 <tr>
 	<td><code>Komponenta</code></td>
@@ -196,7 +196,7 @@ void crtaj() { ptrPolje->crtaj(); }
 	<td>Izvodi se iz dekoratera i implementira nove funkcionalnosti i "dodaje" je ih subjektu.</td>
 </tr>
 <tr>
-	<td colspan='3'>Fasada</td>
+	<td colspan='3' align='center'><strong>Fasada</strong></td>
 </tr>
 <tr>
 	<td><code>Podsistem</code></td>
@@ -215,7 +215,7 @@ ptr_prav->proveri();
 	<td>Sadži pokazivače na sve podsisteme, i u nekoj funkciji ih sve poziva. Tako sakriva kompleksnost i izbegava pozivanje u pogrešnom redosledu</td>
 </tr>
 <tr>
-	<td colspan='3'>Muva</td>
+	<td colspan='3' align='center'><strong>Muva</strong></td>
 </tr>
 <tr>
 	<td><code>IMuva</code></td>
@@ -245,7 +245,7 @@ map
 		<td>Kreira i upravlja muvama, čuva muva i ako postoji ne pravi ih opet</td>
 	</tr>
 	<tr>
-		<td colspan='3'>Zastupnik</td>
+		<td colspan='3' align='center'><strong>Zastupnik</strong></td>
 	</tr>
 	<tr>
 		<td><code>Subjekat</code></td>
