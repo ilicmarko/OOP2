@@ -50,7 +50,7 @@
 </tr>
 <tr>
 <td><code>Proizvod</code></td>
-<td>class WindowsDugme : public Iproizvod{}</td>
+<td><code>class WindowsDugme : public Iproizvod{}</code></td>
 <td>Konkretan proizvod</td>
 </tr>
 <tr>
