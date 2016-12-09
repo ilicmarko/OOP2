@@ -34,22 +34,22 @@
 <td colspan='3'>Apstraktna fabrika</td>
 </tr>
 <tr>
-<td>`IFabrika`</td>
-<td>`virtual UI *napravi_dugme()=0;`</td>
+<td><code>IFabrika</code></td>
+<td><code>virtual UI *napravi_dugme()=0;</code></td>
 <td>Zajednicke metode za sve fabrike</td>
 </tr>
 <tr>
-<td>`Fabrika`</td>
-<td>`class WindowsFabrika : public IFabrika{}`</td>
+<td><code>Fabrika</code></td>
+<td><code>class WindowsFabrika : public IFabrika{}</code></td>
 <td>Kokrenta fabrika koja vraca konkretan proizvod</td>
 </tr>
 <tr>
-<td>`IProizvod`</td>
-<td>`virtual void crtaj() = 0;`</td>
+<td><code>IProizvod</code></td>
+<td><code>virtual void crtaj() = 0;</code></td>
 <td>Zajednicke metode za sve proizvode</td>
 </tr>
 <tr>
-<td>`Proizvod`</td>
+<td><code>Proizvod</code></td>
 <td>class WindowsDugme : public Iproizvod{}</td>
 <td>Konkretan proizvod</td>
 </tr>
@@ -57,24 +57,24 @@
 <td colspan='3'>Prototip</td>
 </tr>
 <tr>
-<td>`IPrototype`</td>
-<td>`virtual Iprototype* clone()=0;`</td>
+<td><code>IPrototype</code></td>
+<td><code>virtual Iprototype* clone()=0;</code></td>
 <td>Ima clone za sve prototipove i jos neke metode</td>
 </tr>
 <tr>
-<td>`Prototype`</td>
+<td><code>Prototype</code></td>
 <td>`virtual Iprototype* clone(){
 IPrototype* tmp = new Prototip1();
 tmp->setBroj( getBroj() );
 return tmp;
 }`</td>
-<td>Kokrentan prototip implementira `clone`. Vraca kopiju sebe</td>
+<td>Kokrentan prototip implementira <code>clone</code>. Vraca kopiju sebe</td>
 </tr>
 <tr>
 <td colspan='3'>Unikat</td>
 </tr>
 <tr>
-<td>`singleton`</td>
+<td><code>singleton</code></td>
 <td>`static Singleton& get() {
 static Singleton single;
 return single;
@@ -85,126 +85,126 @@ return single;
 <td colspan='3'>Adapter</td>
 </tr>
 <tr>
-<td>`NovaKlasa`</td>
-<td>`virtual void novaMetoda()=0;`</td>
+<td><code>NovaKlasa</code></td>
+<td><code>virtual void novaMetoda()=0;</code></td>
 <td>Klasa u koju hocemo da adaptiramo.</td>
 </tr>
 <tr>
-<td>`StaraKlasa`</td>
-<td>`void staraMetoda(){}`</td>
+<td><code>StaraKlasa</code></td>
+<td><code>void staraMetoda(){}</code></td>
 <td>Klasa koju hocemo da adaptiramo.</td>
 </tr>
 <tr>
-<td>`AdapterKlase`</td>
+<td><code>AdapterKlase</code></td>
 <td>`class Adapter : private StaraKlasa, public NovaKlasa{
 void novaMetod(){
 this->staraMetoda();
 }
 }`</td>
-<td>Privatno nasledjuje` Staruklasu`, javno `Novuklasu`</td>
+<td>Privatno nasledjuje<code> Staruklasu`, javno `Novuklasu</code></td>
 </tr>
 <tr>
-<td>`AdapterObjekta`</td>
+<td><code>AdapterObjekta</code></td>
 <td>`class Adapter : public NovaKlasa{
 StaraKlasa *stari
 }`</td>
-<td>Adapter čuva referencu na `Staruklasu` koja se prosleđuje konstruktorom</td>
+<td>Adapter čuva referencu na <code>Staruklasu</code> koja se prosleđuje konstruktorom</td>
 </tr>
 <tr>
 <td colspan='3'>Most</td>
 </tr>
 <tr>
-<td>`Implementacija`</td>
-<td>`virtual void crtajPortret() = 0;`</td>
+<td><code>Implementacija</code></td>
+<td><code>virtual void crtajPortret() = 0;</code></td>
 <td>Sadrzi virtualne funkcije za konkretne implementatore. Koliko ovde metoda imamo toliko imamo i apstrakcija</td>
 </tr>
 <tr>
-<td>`Implementator`</td>
+<td><code>Implementator</code></td>
 <td>`class Pikaso : public Crtac {
 void crtajPortret() {}
 }`</td>
-<td>Konkretni implementator koji se izvodi iz`Implementacija`.</td>
+<td>Konkretni implementator koji se izvodi iz<code>Implementacija</code>.</td>
 </tr>
 <tr>
-<td>`IApstrakcija`</td>
+<td><code>IApstrakcija</code></td>
 <td>`class Platno {
 Crtac* crtac;
 public:
 Platno(Crtac* c): crtac(c){}
 virtual void crtaj() = 0;
 }`</td>
-<td>Sadzi pokazivac na `Implementatora` i virtualno metodu za apstrakciju</td>
+<td>Sadzi pokazivac na <code>Implementatora</code> i virtualno metodu za apstrakciju</td>
 </tr>
 <tr>
-<td>`Apstrakcija`</td>
-<td>```class Portret : public Platno {
+<td><code>Apstrakcija</code></td>
+<td><pre><code>class Portret : public Platno {
 public:
 Portret(Crtac* c): Platno(c){}
 void crtaj() {
 crtac->crtajPortret();
 }
-};```</td>
-<td>Implementira metodu iz `IApstrakcije`</td>
+};</code></pre></td>
+<td>Implementira metodu iz <code>IApstrakcije</code></td>
 </tr>
 <tr>
 <td colspan='3'>Kompozicija</td>
 </tr>
 <tr>
-<td>`IList`</td>
-<td>`virtual void napadni() = 0`</td>
+<td><code>IList</code></td>
+<td><code>virtual void napadni() = 0</code></td>
 <td>Apstraktna klasa koja je zajednicka za sve objekte u kompoziciji.</td>
 </tr>
 <tr>
-<td>`List`</td>
-<td>`class List : public IList {}`</td>
+<td><code>List</code></td>
+<td><code>class List : public IList {}</code></td>
 <td>Idividualni objekat koji ce ici uci u kompoziciju.</td>
 </tr>
 <tr>
-<td>`Kompozicija`</td>
+<td><code>Kompozicija</code></td>
 <td>`class Kompoz : public IList {
 vector
 	<IList*> listovi;}`
 	</td>
-	<td>Nasleđuje `IList`, zato što treba da omogući iste metode samo za svu decu. Sadži komponentu koja čuva listove</td>
+	<td>Nasleđuje <code>IList</code>, zato što treba da omogući iste metode samo za svu decu. Sadži komponentu koja čuva listove</td>
 </tr>
 <tr>
 	<td colspan='3'>Dekorater</td>
 </tr>
 <tr>
-	<td>`Komponenta`</td>
-	<td>`virtual void crtaj() = 0;`</td>
+	<td><code>Komponenta</code></td>
+	<td><code>virtual void crtaj() = 0;</code></td>
 	<td>Definise interfejs za objekte koji se adaptiraju</td>
 </tr>
 <tr>
-	<td>`Subjekat`</td>
-	<td>`class Input : public Polje {}`</td>
-	<td>Klasu koju adaptiramo, izvodi se iz `Komponente`</td>
+	<td><code>Subjekat</code></td>
+	<td><code>class Input : public Polje {}</code></td>
+	<td>Klasu koju adaptiramo, izvodi se iz <code>Komponente</code></td>
 </tr>
 <tr>
-	<td>`IDekorater`</td>
+	<td><code>IDekorater</code></td>
 	<td>`class Dekorater : public Polje {
 Komonenta* ptrPolje;
 public:
 Dekorater(Komonenta* _ptr): ptrPolje(_ptr){}
 void crtaj() { ptrPolje->crtaj(); }
 }`</td>
-	<td>Mora da sadrzi referencu na objekat klase `Komponenta` i nasledjuje interfejs klase `Komponenta`.</td>
+	<td>Mora da sadrzi referencu na objekat klase <code>Komponenta` i nasledjuje interfejs klase `Komponenta</code>.</td>
 </tr>
 <tr>
-	<td>`Dekorater`</td>
-	<td>`class InputIcon : public Dekorater {}`</td>
+	<td><code>Dekorater</code></td>
+	<td><code>class InputIcon : public Dekorater {}</code></td>
 	<td>Izvodi se iz dekoratera i implementira nove funkcionalnosti i "dodaje" je ih subjektu.</td>
 </tr>
 <tr>
 	<td colspan='3'>Fasada</td>
 </tr>
 <tr>
-	<td>`Podsistem`</td>
-	<td>`class CPU {}`</td>
+	<td><code>Podsistem</code></td>
+	<td><code>class CPU {}</code></td>
 	<td>Jedna ili vise kompleksnih klasa koje izvrsavaju zahtev fasade</td>
 </tr>
 <tr>
-	<td>`Fasada`</td>
+	<td><code>Fasada</code></td>
 	<td>`class Kompjuter {
 CPU* ptr_cpu;
 void start() {
@@ -218,24 +218,24 @@ ptr_prav->proveri();
 	<td colspan='3'>Muva</td>
 </tr>
 <tr>
-	<td>`IMuva`</td>
-	<td>```class Slovo {
+	<td><code>IMuva</code></td>
+	<td><pre><code>class Slovo {
 virtual void prikazi(int) = 0;
 Slovo(char _simbol): simbol(_simbol){}
 char simbol;
-};```</td>
+};</code></pre></td>
 	<td>Deklariše bazu muve. Trebalo bi da sadrži i unutrašnje i spoljašnje stanje</td>
 </tr>
 <tr>
-	<td>`Muva`</td>
+	<td><code>Muva</code></td>
 	<td>`class SlovoA : public Slovo {
 SlovoA(): Slovo('A'){}
 void prikazi(int font) {...}
 };`</td>
-	<td>Koknretna muva koja se izvodi iz `IMuve`. I implementira spoljašnje stanje</td>
+	<td>Koknretna muva koja se izvodi iz <code>IMuve</code>. I implementira spoljašnje stanje</td>
 </tr>
 <tr>
-	<td>`Fabrika`</td>
+	<td><code>Fabrika</code></td>
 	<td>`class Fabrika {
 ….
 map
@@ -248,13 +248,13 @@ map
 		<td colspan='3'>Zastupnik</td>
 	</tr>
 	<tr>
-		<td>`Subjekat`</td>
-		<td>`class Racun {}`</td>
+		<td><code>Subjekat</code></td>
+		<td><code>class Racun {}</code></td>
 		<td>Objekat koji treba da radi sa zastupnikom, on prima zahteve od zastupnika.</td>
 	</tr>
 	<tr>
-		<td>`Zatupnik`</td>
-		<td>`class Banka : public Racun {}`</td>
-		<td>Unutar zastupnika proveravamo ulosve i tek onda zovemo `Subjekat`</td>
+		<td><code>Zatupnik</code></td>
+		<td><code>class Banka : public Racun {}</code></td>
+		<td>Unutar zastupnika proveravamo ulosve i tek onda zovemo <code>Subjekat</code></td>
 	</tr>
 </table>
