@@ -63,11 +63,11 @@
 </tr>
 <tr>
 <td><code>Prototype</code></td>
-<td>`virtual Iprototype* clone(){
+<td><pre><code>virtual Iprototype* clone(){
 IPrototype* tmp = new Prototip1();
 tmp->setBroj( getBroj() );
 return tmp;
-}`</td>
+}</code></pre></td>
 <td>Kokrentan prototip implementira <code>clone</code>. Vraca kopiju sebe</td>
 </tr>
 <tr>
@@ -75,10 +75,10 @@ return tmp;
 </tr>
 <tr>
 <td><code>singleton</code></td>
-<td>`static Singleton& get() {
+<td><pre><code>static Singleton& get() {
 static Singleton single;
 return single;
-}`</td>
+}</code></pre></td>
 <td>Jednom se samo generise objekat</td>
 </tr>
 <tr>
@@ -96,18 +96,18 @@ return single;
 </tr>
 <tr>
 <td><code>AdapterKlase</code></td>
-<td>`class Adapter : private StaraKlasa, public NovaKlasa{
+<td><pre><code>class Adapter : private StaraKlasa, public NovaKlasa{
 void novaMetod(){
 this->staraMetoda();
 }
-}`</td>
-<td>Privatno nasledjuje<code> Staruklasu`, javno `Novuklasu</code></td>
+}</code></pre></td>
+<td>Privatno nasledjuje <code>Staruklasu</code>, javno <code>Novuklasu</code></td>
 </tr>
 <tr>
 <td><code>AdapterObjekta</code></td>
-<td>`class Adapter : public NovaKlasa{
+<td><pre><code>class Adapter : public NovaKlasa{
 StaraKlasa *stari
-}`</td>
+}</code></pre></td>
 <td>Adapter čuva referencu na <code>Staruklasu</code> koja se prosleđuje konstruktorom</td>
 </tr>
 <tr>
@@ -120,19 +120,19 @@ StaraKlasa *stari
 </tr>
 <tr>
 <td><code>Implementator</code></td>
-<td>`class Pikaso : public Crtac {
+<td><pre><code>class Pikaso : public Crtac {
 void crtajPortret() {}
-}`</td>
+}</code></pre></td>
 <td>Konkretni implementator koji se izvodi iz<code>Implementacija</code>.</td>
 </tr>
 <tr>
 <td><code>IApstrakcija</code></td>
-<td>`class Platno {
+<td><pre><code>class Platno {
 Crtac* crtac;
 public:
 Platno(Crtac* c): crtac(c){}
 virtual void crtaj() = 0;
-}`</td>
+}</code></pre></td>
 <td>Sadzi pokazivac na <code>Implementatora</code> i virtualno metodu za apstrakciju</td>
 </tr>
 <tr>
@@ -161,9 +161,9 @@ crtac->crtajPortret();
 </tr>
 <tr>
 <td><code>Kompozicija</code></td>
-<td>`class Kompoz : public IList {
+<td><pre><code>class Kompoz : public IList {
 vector
-	<IList*> listovi;}`
+	<IList*> listovi;}</code></pre>
 	</td>
 	<td>Nasleđuje <code>IList</code>, zato što treba da omogući iste metode samo za svu decu. Sadži komponentu koja čuva listove</td>
 </tr>
@@ -182,13 +182,13 @@ vector
 </tr>
 <tr>
 	<td><code>IDekorater</code></td>
-	<td>`class Dekorater : public Polje {
+	<td><pre><code>class Dekorater : public Polje {
 Komonenta* ptrPolje;
 public:
 Dekorater(Komonenta* _ptr): ptrPolje(_ptr){}
 void crtaj() { ptrPolje->crtaj(); }
-}`</td>
-	<td>Mora da sadrzi referencu na objekat klase <code>Komponenta` i nasledjuje interfejs klase `Komponenta</code>.</td>
+}</code></pre></td>
+	<td>Mora da sadrzi referencu na objekat klase <code>Komponenta</code> i nasledjuje interfejs klase <code>Komponenta</code>.</td>
 </tr>
 <tr>
 	<td><code>Dekorater</code></td>
@@ -205,13 +205,13 @@ void crtaj() { ptrPolje->crtaj(); }
 </tr>
 <tr>
 	<td><code>Fasada</code></td>
-	<td>`class Kompjuter {
+	<td><pre><code>class Kompjuter {
 CPU* ptr_cpu;
 void start() {
 ptr_prav->upali();
 ptr_prav->proveri();
 }
-}`</td>
+}</code></pre></td>
 	<td>Sadži pokazivače na sve podsisteme, i u nekoj funkciji ih sve poziva. Tako sakriva kompleksnost i izbegava pozivanje u pogrešnom redosledu</td>
 </tr>
 <tr>
@@ -228,19 +228,19 @@ char simbol;
 </tr>
 <tr>
 	<td><code>Muva</code></td>
-	<td>`class SlovoA : public Slovo {
+	<td><pre><code>class SlovoA : public Slovo {
 SlovoA(): Slovo('A'){}
 void prikazi(int font) {...}
-};`</td>
+};</code></pre></td>
 	<td>Koknretna muva koja se izvodi iz <code>IMuve</code>. I implementira spoljašnje stanje</td>
 </tr>
 <tr>
 	<td><code>Fabrika</code></td>
-	<td>`class Fabrika {
+	<td><pre><code>class Fabrika {
 ….
 map
 		<char, Slovo*> slova;
-};`
+};</code></pre>
 		</td>
 		<td>Kreira i upravlja muvama, čuva muva i ako postoji ne pravi ih opet</td>
 	</tr>
