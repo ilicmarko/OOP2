@@ -2,7 +2,7 @@
 	Ideja ovog uzorka je da za jedan objekat vezemo vise, kad se promeni stanje subjekta
 	objekti koji su vezani (obzerveri) bivaju obavesteni.
 
-	@class Subjekt  	Je onaj za koga se vezuju objekti i koji obavestava
+	@class Subjekt  	Je onaj za koga se vezuju objekti i koji obavestava Obzervere
 	@class Obzerver		Implementira subjkat
 
 */
@@ -60,7 +60,7 @@ public:
 		}
 	}
 
-	// RADI PRIMERA
+	// RADI PRIMERA!!!
 	const string UrlGenerator() {
 		string url;
 		for (int i = 0; i <= URL_LENGHT; i++) {
