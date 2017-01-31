@@ -302,7 +302,7 @@ map
 - Strategy: Interfejs za sva stanja.
 - ConcreteStrategy: Impementira konkretne algoritme
 
-#### Template method _(Pokrtanje motora)_
+#### Template method _(Pokretanje motora/igrice)_
 
 - Template: Definise algoritam, i primitivne funkcije (koje su private).
 - ConcreteClass: Redefinise primitivne funkcije iz Template-a
