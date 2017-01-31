@@ -258,3 +258,52 @@ map
 		<td>Unutar zastupnika proveravamo ulosve i tek onda zovemo <code>Subjekat</code></td>
 	</tr>
 </table>
+
+---
+### Drugi kolokvijum
+
+#### Chain of responsibility _(Logger)_
+
+- Handler: Definise interfase za razresavanje zahteva.
+- ConcreteHandler: Konkretan razresivac, izvodi se iz Handler-a. Treba da pokazuje na njegovog sledbenika.
+
+#### Mediator _(Chat)_
+
+- Mediator: Interfase za komunikaciju sa 'kolegama'.
+- ConsreteMediator: Implementira komunikaciju izmedju kolega, zna kolege.
+- Colleague: Svaki kolega zna svog mediatora i preko njega komunicira sa drugim kolegama.
+
+#### Memento _(Kalkulator)_
+
+- Originator: Subjekat, koji zna da sacuva samog sebe. Na njemu se poziva funkcija Restore()
+- Caretaker: Onaj koji cuva listu kreiranih podsetnika
+- Memento: Jedan restore point (snapshot), koji cuva sve potrebno da se rekonstruise objekat
+
+#### Observer _(Youtube)_
+- Subject: Cuva observere u listi i kad treba obavestva sve pozivom f-je iz Observer
+- Observer: Ima funkciju za obavestavanje koja se poziva od strane subjekta
+- ConcreteObserver: Redefinise funkciju za obavestavanje
+
+#### State _(Paljenje motora)_
+- Context: Sadrzi referencu na konkretna stanja, u njemu se definise stanje. Nasledjuje state
+- State: Interfejs za sva stanja.
+- ConcreteState: Impementira konkretno ponasanje objekta u nekom stanju
+
+#### Strategy _(Sorting)_
+
+- Context: Sadrzi referencu na konkretan algoritam.
+- Strategy: Interfejs za sva stanja.
+- ConcreteStrategy: Impementira konkretne algoritme
+
+#### Template method _(Pokrtanje motora)_
+
+- Template: Definise algoritam, i primitivne funkcije (koje su private).
+- ConcreteClass: Redefinise primitivne funkcije iz Template-a
+
+#### Visitor _(Bonus plata)_
+
+- Visitor: Sadrzi operacije Poseti() za svaku podklasu Element
+- ConcreteVisitor: Implementira operacije Poseti(), implrementira se za svaku potklasu
+- Element: Deklarise operaciju Prihvati() posetioca
+- ConcreteElement	Implementira prihvacivanje posetioca
+- ObjectStructure	Definise intefejs za obilazenje elementa i slanje visitora. Compsite cesto

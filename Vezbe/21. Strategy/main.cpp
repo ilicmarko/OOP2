@@ -1,10 +1,10 @@
 /*
-Uzorak isti kao i stanje, samo algoritmi :D Koristi se da u toku izvrsavanja klasa
-pormeni svoj algoritam.
+	Uzorak isti kao i stanje, samo algoritmi :D Koristi se da u toku izvrsavanja klasa
+	pormeni svoj algoritam.
 
-@Context				Sadrzi referencu na konkretan algoritam.
-@Strategy				Interfejs za sva stanja.
-@ConcreteStrategy		Impementira konkretne algoritme
+	@Context				Sadrzi referencu na konkretan algoritam.
+	@Strategy				Interfejs za sva stanja.
+	@ConcreteStrategy		Impementira konkretne algoritme
 */
 
 #include <iostream>

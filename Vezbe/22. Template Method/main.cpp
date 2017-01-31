@@ -1,9 +1,9 @@
 /*
-Definise skeleton algoritma. Samo se definisu koraci a funkcije se redefinisu
-u nasledjenoj klasi.
+	Definise skeleton algoritma. Samo se definisu koraci a funkcije se redefinisu
+	u nasledjenoj klasi.
 
-@Template		Definise algoritam, i primitivne funkcije
-@ConcreteClass	Redefinise primitivne funkcije iz Template-a
+	@Template		Definise algoritam, i primitivne funkcije
+	@ConcreteClass	Redefinise primitivne funkcije iz Template-a
 */
 
 #include <iostream>

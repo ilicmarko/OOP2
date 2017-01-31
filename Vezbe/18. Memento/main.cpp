@@ -3,8 +3,7 @@
 
 	@ Originator 		Subjekat, koji zna da sacuva samog sebe. Na njemu se poziva funkcija Restore()
 	@ Caretaker			Onaj koji cuva listu kreiranih podsetnika
-	@ Memento			Cuva stanje i zabranjuje direktan pristup. To je ustvari restore poin (snapshot) u kome se cuvaju
-						svi atributi koji su potrebni da se rekonstruise jedno stanje.
+	@ Memento			Jedan restore point (snapshot), koji cuva sve potrebno da se rekonstruise objekat
 */
 
 

@@ -2,8 +2,9 @@
 	Ideja ovog uzorka je da za jedan objekat vezemo vise, kad se promeni stanje subjekta
 	objekti koji su vezani (obzerveri) bivaju obavesteni.
 
-	@class Subjekt  	Je onaj za koga se vezuju objekti i koji obavestava Obzervere
-	@class Obzerver		Implementira subjkat
+	@Subject  			Cuva observere u listi i kad treba obavestva sve pozivom f-je iz Observer
+	@Observer			Ima funkciju za obavestavanje koja se poziva od strane subjekta
+	@ConcreteObserver	Redefinise funkciju za obavestavanje
 
 */
 

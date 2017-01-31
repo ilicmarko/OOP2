@@ -1,11 +1,11 @@
 /*
-Dodavanje funkcija u vec postojecu hijerahiju klasa.
+	Dodavanje funkcija u vec postojecu hijerahiju klasa.
 
-@Visitor 			Sadrzi operacije Poseti() za svaku podklasu Element
-@ConcreteVisitor	Implementira operacije Poseti(), implrementira se za svaku potklasu
-@Element			Deklarise operaciju Prihvati() posetioca
-@ConcreteElement	Implementira prihvacivanje posetioca
-@ObjectStructure	Definise intefejs za obilazenje elementa i slanje visitora. Compsite cesto
+	@Visitor 			Sadrzi operacije Poseti() za svaku podklasu Element
+	@ConcreteVisitor	Implementira operacije Poseti(), implrementira se za svaku potklasu
+	@Element			Deklarise operaciju Prihvati() posetioca
+	@ConcreteElement	Implementira prihvacivanje posetioca
+	@ObjectStructure	Definise intefejs za obilazenje elementa i slanje visitora. Compsite cesto
 
 */
 

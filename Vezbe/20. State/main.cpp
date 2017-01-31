@@ -1,10 +1,10 @@
 /*
-Odlican uzorak kad u toku izvrsavanja hocemo da promenimo ponasanje objekta.
+	Odlican uzorak kad u toku izvrsavanja hocemo da promenimo ponasanje objekta.
 
-@Context		Sadrzi referencu na konkretna stanja, u njemu se definise stanje.
-Takodje funkcije iz stanja se redefinisu u konteksu!!!
-@State			Interfejs za sva stanja.
-@ConcreteState	Impementira konkretno ponasanje objekta u nekom stanju
+	@Context		Sadrzi referencu na konkretna stanja, u njemu se definise stanje.
+	Takodje funkcije iz stanja se redefinisu u konteksu!!!
+	@State			Interfejs za sva stanja.
+	@ConcreteState	Impementira konkretno ponasanje objekta u nekom stanju
 */
 
 // Recimo uzmemo primer motora koji ima tri stanja: ugasen, paljenje i upaljen.
