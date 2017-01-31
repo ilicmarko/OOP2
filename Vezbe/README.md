@@ -267,6 +267,13 @@ map
 - Handler: Definise interfase za razresavanje zahteva.
 - ConcreteHandler: Konkretan razresivac, izvodi se iz Handler-a. Treba da pokazuje na njegovog sledbenika.
 
+#### Komanda (Televizor)
+- Command: Deklarise interfejs za izvrsavanje operacije
+- ConcreteCommand: Cuva referencu na Primaoca, implementira Execute koj poziva Primaoca
+- Reciever: Izvrsava radnju kad dobij poziv od Konkretne komande
+- Invoker: Cuva referencu na komandu, na njemu su poziva izvrsavanje komande
+
+
 #### Mediator _(Chat)_
 
 - Mediator: Interfase za komunikaciju sa 'kolegama'.
